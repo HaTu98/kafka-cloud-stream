@@ -12,4 +12,9 @@ public class GreetingsListener {
     public void handleGreetings(@Payload Greetings greetings) {
         System.out.println(greetings.toString());
     }
+
+    @StreamListener(GreetingStreams.OUTPUT)
+    public void handleGreetingOutPut(@Payload Greetings greetings) {
+        System.out.println(greetings.toString());
+    }
 }
